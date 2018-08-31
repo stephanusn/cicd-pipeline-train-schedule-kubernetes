@@ -20,7 +20,7 @@ metadata:
   labels:
     app: train-schedule
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: train-schedule
@@ -33,4 +33,4 @@ spec:
       - name: train-schedule
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
-- containerPort: 8080
+        - containerPort: 8080
